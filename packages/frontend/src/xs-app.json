@@ -1,0 +1,22 @@
+{
+  "welcomeFile": "/index.html",
+  "authenticationMethod": "route",
+  "websockets": {
+    "enabled": true
+  },
+  "routes": [
+    {
+      "source": "/api/(.*)$",
+      "destination": "srv_api",
+      "csrfProtection": false,
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/(.*)$",
+      "target": "$1",
+      "localDir": "./",
+      "csrfProtection": true,
+      "authenticationType": "xsuaa"
+    }
+  ]
+}

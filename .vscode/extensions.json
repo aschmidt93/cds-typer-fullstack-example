@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "formulahendry.auto-rename-tag",
+    "mgmcdermott.vscode-language-babel",
+    "naumovs.color-highlight",
+    "dbaeumer.vscode-eslint",
+    "kisstkondoros.vscode-gutter-preview",
+    "xabikos.javascriptsnippets",
+    "christian-kohler.path-intellisense",
+    "esbenp.prettier-vscode",
+    "sapse.vscode-cds",
+    "iljapostnovs.ui5plugin",
+    "wayou.vscode-todo-highlight",
+    "janisdd.vscode-edit-csv",
+    "mechatroner.rainbow-csv"
+  ]
+}

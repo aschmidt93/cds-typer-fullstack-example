@@ -1,0 +1,32 @@
+{
+  "extends": ["plugin:@sap/cds/recommended"],
+  "plugins": ["@sap/eslint-plugin-cds"],
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6
+  },
+  "rules": {
+    "@sap/cds/assoc2many-ambiguous-key": "error",
+    "@sap/cds/auth-no-empty-restrictions": "error",
+    "@sap/cds/auth-use-requires": "warn",
+    "@sap/cds/auth-valid-restrict-grant": "error",
+    "@sap/cds/auth-valid-restrict-keys": "error",
+    "@sap/cds/auth-valid-restrict-to": "error",
+    "@sap/cds/auth-valid-restrict-where": "error",
+    "@sap/cds/extension-restrictions": "error",
+    "@sap/cds/latest-cds-version": "warn",
+    "@sap/cds/min-node-version": "warn",
+    "@sap/cds/no-db-keywords": "warn",
+    "@sap/cds/no-dollar-prefixed-names": "error",
+    "@sap/cds/no-join-on-draft": "warn",
+    "@sap/cds/require-2many-oncond": "error",
+    "@sap/cds/sql-cast-suggestion": "warn",
+    "@sap/cds/start-elements-lowercase": "warn",
+    "@sap/cds/start-entities-uppercase": "warn",
+    "@sap/cds/valid-csv-header": "error"
+  }
+}

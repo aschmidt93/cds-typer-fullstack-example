@@ -1,0 +1,43 @@
+{
+  "folders": [
+    {
+      "name": "root",
+      "path": ".."
+    },
+    {
+      "name": "backend",
+      "path": "../packages/backend"
+    },
+    {
+      "name": "frontend",
+      "path": "../packages/frontend"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      "**/gen": true,
+      "**/package-lock.json": true,
+      "packages": true,
+      "**/tsconfig.eslint.json": true
+    },
+    "files.watcherExclude": {
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "**/.hg/store/**": true,
+      "**/gen/*/**": true,
+      "**/dist/**": true
+    },
+    "files.readonlyInclude": {
+      "**/node_modules/**": true,
+      "**/@cds-models/**": true
+    },
+    "eslint.workingDirectories": ["../.."],
+    "cds.typeGenerator.enabled": true,
+  }
+}

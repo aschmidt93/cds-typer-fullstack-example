@@ -1,0 +1,44 @@
+# CAP
+_out
+*.db
+connection.properties
+default-*.json
+.cdsrc-private.json
+target/
+@cds-models
+
+# Web IDE, App Studio
+.che/
+
+# production
+/build
+/views
+node_modules/
+dist*/
+gen*/
+
+# MTA
+*_mta_build_tmp
+*.mtar
+mta_archives/
+mta-op-*
+Makefile_*.mta
+
+# Other
+.DS_Store
+*.orig
+*.log
+.env
+*.iml
+*.flattened-pom.xml
+simulations/
+./backend/logs/
+
+# Test Data
+**/db/data/flexus.*.csv
+**/test/data/flexus.*.csv
+**/test/data/de.*.csv
+!**/test/data/flexus.AgvHub-MQTTUsers.csv
+packages/backend/db.sqlite
+packages/backend/db.sqlite-shm
+packages/backend/db.sqlite-wal

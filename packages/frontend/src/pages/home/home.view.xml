@@ -1,0 +1,17 @@
+<mvc:View
+	controllerName="example.frontend.pages.home.home"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+>
+	<Page
+		id="homeView"
+		title="{i18n>appTitle}"
+	>
+		<content>
+			<Button press="onSomeFunction" text="Call 'someFunction' of BooksService"></Button>
+			<Button press="onSomeAction" text="Call 'someAction' of BooksService"></Button>
+		</content>
+	</Page>
+</mvc:View>

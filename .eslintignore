@@ -1,0 +1,7 @@
+**/node_modules/
+**/gen/
+**/generated/
+**/dist/
+**/.git
+**/types/cds/
+**/@cds-models/
