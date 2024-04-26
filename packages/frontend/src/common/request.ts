@@ -2,10 +2,11 @@ import Services, {
   ActionFunctionParam,
   ActionFunctionReturn,
   EntityDefinition,
-  ServiceActionsFunctions,
+  ServiceActions,
   ServiceDefinition,
   ServiceEntities,
 } from "@example/backend";
+import { ServiceFunctions } from "@example/backend";
 import axios, { AxiosRequestConfig, AxiosResponse, Method } from "axios";
 
 /**
@@ -143,12 +144,12 @@ class ODataService<T extends ServiceDefinition> {
    * @param data Optional payload
    * @returns Response
    */
-  action<A extends keyof ServiceActionsFunctions<T>>(
+  action<A extends keyof ServiceActions<T>>(
     name: A,
-    ...data: ActionFunctionParam<ServiceActionsFunctions<T>[A]> extends undefined
+    ...data: ActionFunctionParam<ServiceActions<T>[A]> extends undefined
       ? []
-      : [ActionFunctionParam<ServiceActionsFunctions<T>[A]>]
-  ): Promise<AxiosResponse<ODataReturn<ActionFunctionReturn<ServiceActionsFunctions<T>[A]>>>> {
+      : [ActionFunctionParam<ServiceActions<T>[A]>]
+  ): Promise<AxiosResponse<ODataReturn<ActionFunctionReturn<ServiceActions<T>[A]>>>> {
     const url = `${this.srv.Endpoint.path}/${name.toString()}`;
     return Request.post(url, data?.[0], this.config);
   }
@@ -159,12 +160,12 @@ class ODataService<T extends ServiceDefinition> {
    * @param params Query params
    * @returns Response
    */
-  function<F extends keyof ServiceActionsFunctions<T>>(
+  function<F extends keyof ServiceFunctions<T>>(
     name: F,
-    ...params: ActionFunctionParam<ServiceActionsFunctions<T>[F]> extends undefined
+    ...params: ActionFunctionParam<ServiceFunctions<T>[F]> extends undefined
       ? []
-      : [ActionFunctionParam<ServiceActionsFunctions<T>[F]>]
-  ): Promise<AxiosResponse<ODataReturn<ActionFunctionReturn<ServiceActionsFunctions<T>[F]>>>> {
+      : [ActionFunctionParam<ServiceFunctions<T>[F]>]
+  ): Promise<AxiosResponse<ODataReturn<ActionFunctionReturn<ServiceFunctions<T>[F]>>>> {
     const baseUrl = `${this.srv.Endpoint.path}/${name.toString()}`;
     const functionParams = this._getFunctionURLParams(params?.[0]);
     const url = baseUrl + functionParams;
