@@ -15,3 +15,8 @@ entity Authors : managed, cuid {
   firstName : String;
   lastName  : String;
 }
+
+type MyEnum : String enum {
+  ONE;
+  TWO
+}
