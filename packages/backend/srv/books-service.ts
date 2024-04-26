@@ -43,4 +43,15 @@ export default class BooksServiceHandler
       date: new Date().toISOString(),
     };
   };
+
+  onActionWithNoReturn: ActionFunctionHandler<typeof BooksServiceTypes.actionWithNoReturn> = (
+    req
+  ) => {
+    return;
+  };
+
+  onActionWithImportedEnum: ActionFunctionHandler<typeof BooksServiceTypes.actionWithImportedEnum> =
+    (req) => {
+      return req.data.val;
+    };
 }

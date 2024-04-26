@@ -18,6 +18,8 @@ service BooksService @(path: '/api/v1/books/') {
      * Example action with params and object as return type
      */
     action   someAction(params : ExampleParams, name : String)  returns ExampleType;
+    action   actionWithNoReturn();
+    action   actionWithImportedEnum(val : schema.MyEnum)        returns String;
 
     type ExampleParams {
         param1 : Integer;
@@ -25,7 +27,7 @@ service BooksService @(path: '/api/v1/books/') {
     }
 
     type ExampleType {
-        date : Date;
+        date : DateTime;
         val  : String;
     }
 
