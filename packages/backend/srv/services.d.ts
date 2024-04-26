@@ -88,7 +88,7 @@ declare module "@sap/cds" {
           ? []
           : [ActionFunctionParam<ServiceActionsFunctions<T>[E]>]
       ): Promise<ActionFunctionReturn<ServiceActionsFunctions<T>[E]>>;
-    } & Service["send"];
+    };
   }
 
   /**
